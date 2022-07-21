@@ -1,3 +1,4 @@
+
 package Inventario;
 
 import java.util.ArrayList;
@@ -13,14 +14,12 @@ public class FaultyProducts implements ProductIterator{
 	        this.nomProducto = nomProducto;
 	        this.tipoDeFalla = tipoDeFalla;
 	 }
-
 	 public void someMethod(){
 	        //METODO A IMPLEMENTAR
 	 }
 	 public void setSomething() {
 			 System.out.println("Producto con Fallas");
 	 }
-	 
 	 @Override
 	 public boolean hasNext() {
 		 someMethod();
@@ -40,6 +39,5 @@ public class FaultyProducts implements ProductIterator{
         currentPosition++;
         return productAvailable;
 	}
-	 
-	 
+ 
 }

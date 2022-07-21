@@ -39,8 +39,5 @@ public class ProductAvailable implements ProductIterator{
         }
         currentPosition++;
         return productAvailable;
-    
-	}
-    
-    
+	} 
 }

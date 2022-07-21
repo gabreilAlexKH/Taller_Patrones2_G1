@@ -39,6 +39,5 @@ public class ProductInRepair implements ProductIterator{
         }
         currentPosition++;
         return productAvailable;
-    
 	}
 }

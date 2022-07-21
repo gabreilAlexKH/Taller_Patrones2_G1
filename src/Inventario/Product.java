@@ -1,3 +1,4 @@
+
 package Inventario;
 
 public class Product implements TechnologyItems{
