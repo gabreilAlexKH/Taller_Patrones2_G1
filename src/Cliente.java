@@ -1,7 +1,11 @@
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+import ChainOfResponsability.*;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-
 import Inventario.*;
 import logistica.*;
 import tienda.Coordenadas;
@@ -45,6 +49,21 @@ public class Cliente {
 		
 		
 		//Secuencia Patron Chain of responsability
+		List<Fallo> fallos = new ArrayList<>();
+		fallos.add(Fallo.BATERIADANIADA);
+		Articulo a = new Articulo(100,2, LocalDate.of(2022,9,06), fallos);
+		AsistenteDepartamento ad = new AsistenteDepartamento();
+		MiembroDepartamentoTecnico mdt = new MiembroDepartamentoTecnico();
+		JefeInventario ji = new JefeInventario();
+		GerenteTienda gt = new GerenteTienda();
+		ad.setNext(mdt);
+		mdt.setNext(ji);
+		ji.setNext(gt);
+		ad.aprobarCambio(a);
+		
+		
+		
+		
 	}
 
 }
